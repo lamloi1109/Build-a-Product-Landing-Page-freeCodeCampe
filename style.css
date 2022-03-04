@@ -1,0 +1,246 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #EEEEEE;
+    font-family: 'Lato', sans-serif;
+}
+.page{
+    position: relative;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #EEEEEE;
+    z-index: 1;
+    height: 100px;
+}
+.logo #header-img{
+    width: 300px;
+    height: 30px;
+    object-fit: cover;
+}
+
+#nav-bar .nav-link{
+    margin: 0px 55px;
+    text-decoration: none;
+    color: #000000;
+}
+#contact{
+    margin-top: 100px;
+}
+#contact,#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#form{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.form-group{
+    margin: 10px;
+}
+.form-group input{
+    max-width: 280px;
+    width: 280px;
+    padding: 5px;
+}
+.btn{
+    background-color: #F1C40F;
+    border: none;
+    padding: 5px 5px 5px 10px;
+    font-size: 1em;
+    font-weight: 900;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in;
+}
+.btn:hover{
+    background-color: #dab31a ;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+#Features{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.feature-item{
+    display: flex;
+    justify-content: space-between;
+}
+.feature-item .content{
+    height: 125px;
+    width: 100%;
+}
+.icon{
+    color: #FF8C00;
+    height: 125px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+#How-It-Works{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+#Pricing{
+    margin-top: 50px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.card{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.card .card-heading{
+    width: 100%;
+    background-color: #DDDDDD;
+    text-align: center;
+    padding: 15px;
+}
+.card h2{
+    margin: 10px;
+}
+.card ol{
+    list-style: none;
+    text-align: center;
+}
+.card li:not(:first-child){
+    margin: 10px;
+}
+.card li:last-child{
+    margin-bottom: 30px;
+}
+#footer{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding:20px;
+    background-color: #DDDDDD;
+}
+#footer ul{
+    list-style: none;
+    display: flex;
+}
+#footer ul li{
+    margin: 10px;
+}
+#footer ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    #header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #EEEEEE;
+        z-index: 1;
+        height: 100px;
+        flex-direction: column;
+    }
+    #nav-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #nav-bar .nav-link{
+        margin: 0px 55px;
+        text-decoration: none;
+        color: #000000;
+    }
+    #contact{
+        margin-top: 150px;
+    }
+    #contact h2{ 
+        text-align: center;
+    }
+    .feature-item .content{
+        text-align: center; 
+    }
+    .feature-item .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        width: 140px;
+    }
+    #Pricing{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto 300px auto;
+        grid-template-rows: repeat(3,300px);
+    }
+    .card{
+        margin: 10px;
+    }
+    .card:first-child{
+        grid-column: 2/3;
+        grid-row: 1/2;         
+    }
+    .card:nth-child(2){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .card:last-child{
+        grid-column: 2/3;
+        grid-row: 3/4;        
+    }
+    #How-It-Works{
+        margin: 10px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .feature-item .icon{
+        display: none;
+    }
+    .feature-item h2{
+        text-align: center;
+    }
+    #Pricing{
+        max-width: 545px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 300px 1fr;
+        grid-template-rows: repeat(auto-fill,minmax(300px ,1fr));
+    }
+}
